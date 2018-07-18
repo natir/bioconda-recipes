@@ -14,11 +14,16 @@ build:
 
 requirements:
   build:
+    - '{{ compiler("c") }}'
     - rust
+  host:
     - xz
     - zlib
     - bzip2
-    - '{{ compiler("c") }}'
+  run:
+    - xz
+    - zlib
+    - bzip2
 
 test:
   commands:
